@@ -18,6 +18,7 @@
 staging:
   profile: ~
   whoami: master
+  foo: trigger
 
 publish:
   whoami: asf-site
@@ -48,4 +49,3 @@ github:
       required_status_checks:
         contexts:
           - img-check
-

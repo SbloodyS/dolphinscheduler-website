@@ -34256,7 +34256,7 @@
     ]
   },
   {
-    "content": "MySQL 数据源\n\n\n数据源：选择 MYSQL\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 MySQL 的 IP\n端口：输入连接 MySQL 的端口\n用户名：设置连接 MySQL 的用户名\n密码：设置连接 MySQL 的密码\n数据库名：输入连接 MySQL 的数据库名称\nJdbc 连接参数：用于 MySQL 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n否，使用前需请参考 数据源配置 中的 &quot;数据源中心&quot; 章节激活数据源。\n",
+    "content": "MySQL 数据源\n\n\n数据源：选择 MYSQL\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 MySQL 的 IP\n端口：输入连接 MySQL 的端口\n用户名：设置连接 MySQL 的用户名\n密码：设置连接 MySQL 的密码\n数据库名：输入连接 MySQL 的数据库名称\nJdbc 连接参数：用于 MySQL 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n驱动下载链接，mysql-connector-j-8.0.33\n\n",
     "version": "dev",
     "link": "/guide/datasource/mysql",
     "title": "MySQL 数据源",
@@ -34267,7 +34267,7 @@
     ]
   },
   {
-    "content": "POSTGRESQL 数据源\n\n\n数据源：选择 POSTGRESQL\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 POSTGRESQL 的 IP\n端口：输入连接 POSTGRESQL 的端口\n用户名：设置连接 POSTGRESQL 的用户名\n密码：设置连接 POSTGRESQL 的密码\n数据库名：输入连接 POSTGRESQL 的数据库名称\nJdbc 连接参数：用于 POSTGRESQL 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n是，数据源不需要任务附加操作即可使用。\n",
+    "content": "POSTGRESQL 数据源\n\n\n数据源：选择 POSTGRESQL\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 POSTGRESQL 的 IP\n端口：输入连接 POSTGRESQL 的端口\n用户名：设置连接 POSTGRESQL 的用户名\n密码：设置连接 POSTGRESQL 的密码\n数据库名：输入连接 POSTGRESQL 的数据库名称\nJdbc 连接参数：用于 POSTGRESQL 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n\n",
     "version": "dev",
     "link": "/guide/datasource/postgresql",
     "title": "POSTGRESQL 数据源",
@@ -34278,7 +34278,7 @@
     ]
   },
   {
-    "content": "HIVE数据源\n使用HiveServer2\n\n\n数据源：选择 HIVE\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 HIVE 的 IP\n端口：输入连接 HIVE 的端口\n用户名：设置连接 HIVE 的用户名\n密码：设置连接 HIVE 的密码\n数据库名：输入连接 HIVE 的数据库名称\nJdbc 连接参数：用于 HIVE 连接的参数设置，以 JSON 形式填写\n\n\n注意：如果您希望在同一个会话中执行多个 HIVE SQL，您可以修改配置文件 common.properties 中的配置，设置 support.hive.oneSession = true。\n这对运行 HIVE SQL 前设置环境变量的场景会很有帮助。参数 support.hive.oneSession 默认值为 false，多条 SQL 将在不同的会话中运行。\n\n使用 HiveServer2 HA Zookeeper\n\n注意：如果没有开启 kerberos,请保证参数 hadoop.security.authentication.startup.state 值为 false,\n参数 java.security.krb5.conf.path 值为空. 开启了 kerberos，则需要在 common.properties 配置以下参数\n# whether to startup kerberos\nhadoop.security.authentication.startup.state=true\n\n# java.security.krb5.conf path\njava.security.krb5.conf.path=/opt/krb5.conf\n\n# login user from keytab username\nlogin.user.keytab.username=hdfs-mycluster@ESZ.COM\n\n# login user from keytab path\nlogin.user.keytab.path=/opt/hdfs.headless.keytab\n\n是否原生支持\n是，数据源不需要任务附加操作即可使用。\n",
+    "content": "HIVE数据源\n使用HiveServer2\n\n\n数据源：选择 HIVE\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 HIVE 的 IP\n端口：输入连接 HIVE 的端口\n用户名：设置连接 HIVE 的用户名\n密码：设置连接 HIVE 的密码\n数据库名：输入连接 HIVE 的数据库名称\nJdbc 连接参数：用于 HIVE 连接的参数设置，以 JSON 形式填写\n\n\n注意：如果您希望在同一个会话中执行多个 HIVE SQL，您可以修改配置文件 common.properties 中的配置，设置 support.hive.oneSession = true。\n这对运行 HIVE SQL 前设置环境变量的场景会很有帮助。参数 support.hive.oneSession 默认值为 false，多条 SQL 将在不同的会话中运行。\n\n使用 HiveServer2 HA Zookeeper\n\n注意：如果没有开启 kerberos,请保证参数 hadoop.security.authentication.startup.state 值为 false,\n参数 java.security.krb5.conf.path 值为空. 开启了 kerberos，则需要在 common.properties 配置以下参数\n# whether to startup kerberos\nhadoop.security.authentication.startup.state=true\n\n# java.security.krb5.conf path\njava.security.krb5.conf.path=/opt/krb5.conf\n\n# login user from keytab username\nlogin.user.keytab.username=hdfs-mycluster@ESZ.COM\n\n# login user from keytab path\nlogin.user.keytab.path=/opt/hdfs.headless.keytab\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n\n",
     "version": "dev",
     "link": "/guide/datasource/hive",
     "title": "HIVE数据源",
@@ -34289,7 +34289,7 @@
     ]
   },
   {
-    "content": "SNOWFLAKE 数据源\n\n数据源参数\n\n数据源：选择 SNOWFLAKE 数据源\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 SNOWFLAKE 数据源 的 IP\n端口：输入连接 SNOWFLAKE 数据源 的端口\n用户名：设置连接 SNOWFLAKE 数据源 的用户名\n密码：设置连接 SNOWFLAKE 数据源 的密码\n数据库名：输入连接 SNOWFLAKE 数据源 的数据库名称\n数据仓库： 输入数据 SNOWFLAKE 的数据仓库名称\nJdbc 连接参数：用于 SNOWFLAKE 数据源 连接的参数设置，以 JSON 形式填写\n\n",
+    "content": "SNOWFLAKE 数据源\n\n数据源参数\n\n数据源：选择 SNOWFLAKE 数据源\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 SNOWFLAKE 数据源 的 IP\n端口：输入连接 SNOWFLAKE 数据源 的端口\n用户名：设置连接 SNOWFLAKE 数据源 的用户名\n密码：设置连接 SNOWFLAKE 数据源 的密码\n数据库名：输入连接 SNOWFLAKE 数据源 的数据库名称\n数据仓库： 输入数据 SNOWFLAKE 的数据仓库名称\nJdbc 连接参数：用于 SNOWFLAKE 数据源 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n\n",
     "version": "dev",
     "link": "/guide/datasource/snowflake",
     "title": "SNOWFLAKE 数据源",
@@ -34300,7 +34300,7 @@
     ]
   },
   {
-    "content": "KYUUBI数据源\n使用HiveServer2\n\n\n数据源：选择 KYUUBI\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 KYUUBI 的 IP\n端口：输入连接 KYUUBI 的端口\n用户名：设置连接 KYUUBI 的用户名\n密码：设置连接 KYUUBI 的密码\n数据库名：输入连接 KYUUBI 的数据库名称\nJdbc 连接参数：用于 KYUUBI 连接的参数设置，以 JSON 形式填写\n\n如需Kerberos验证，请直接配置相应参数在jdbc连接参数中\n\nclientKeytab: 用户客户端验证的keytab文件路径\n\nclientPrincipal: 用户客户端验证的Kerberos principal\n\nserverPrincipal: 在服务端通过kyuubi.kinit.principal配置的Kerberos principal.\n\n是否原生支持\n是，数据源不需要任务附加操作即可使用。\n",
+    "content": "KYUUBI数据源\n使用HiveServer2\n\n\n数据源：选择 KYUUBI\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 KYUUBI 的 IP\n端口：输入连接 KYUUBI 的端口\n用户名：设置连接 KYUUBI 的用户名\n密码：设置连接 KYUUBI 的密码\n数据库名：输入连接 KYUUBI 的数据库名称\nJdbc 连接参数：用于 KYUUBI 连接的参数设置，以 JSON 形式填写\n\n如需Kerberos验证，请直接配置相应参数在jdbc连接参数中\n\nclientKeytab: 用户客户端验证的keytab文件路径\n\nclientPrincipal: 用户客户端验证的Kerberos principal\n\nserverPrincipal: 在服务端通过kyuubi.kinit.principal配置的Kerberos principal.\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n\n",
     "version": "dev",
     "link": "/guide/datasource/kyuubi",
     "title": "KYUUBI数据源",
@@ -34311,7 +34311,7 @@
     ]
   },
   {
-    "content": "Spark数据源\n\n\n数据源：选择 Spark\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP/主机名：输入连接Spark的IP\n端口：输入连接Spark的端口\n用户名：设置连接Spark的用户名\n密码：设置连接Spark的密码\n数据库名：输入连接Spark的数据库名称\nJdbc连接参数：用于Spark连接的参数设置，以JSON形式填写\n\n注意：如果开启了kerberos，则需要填写 Principal\n\n    \n  \n是否原生支持\n是，数据源不需要任务附加操作即可使用。\n",
+    "content": "Spark数据源\n\n\n数据源：选择 Spark\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP/主机名：输入连接Spark的IP\n端口：输入连接Spark的端口\n用户名：设置连接Spark的用户名\n密码：设置连接Spark的密码\n数据库名：输入连接Spark的数据库名称\nJdbc连接参数：用于Spark连接的参数设置，以JSON形式填写\n\n注意：如果开启了kerberos，则需要填写 Principal\n\n    \n  \n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n\n",
     "version": "dev",
     "link": "/guide/datasource/spark",
     "title": "Spark数据源",
@@ -34322,7 +34322,7 @@
     ]
   },
   {
-    "content": "AWS Athena 数据源\n\n\n数据源：选择 ATHENA\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\n用户名：设置连接 AWS 的 access key\n密码：设置连接 AWS 的 secret access key\nAwsRegion: 设置连接 AWS 的区域\n数据库名：输入连接 ATHENA 的数据库名称\nJdbc 连接参数：用于 ATHENA 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n\n否，使用前需请参考 数据源配置 中的 &quot;数据源中心&quot; 章节激活数据源。\nJDBC驱动配置参考文档 athena-connect-with-jdbc\n驱动下载链接 SimbaAthenaJDBC-2.0.31.1000/AthenaJDBC42.jar\n\n",
+    "content": "AWS Athena 数据源\n\n\n数据源：选择 ATHENA\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\n用户名：设置连接 AWS 的 access key\n密码：设置连接 AWS 的 secret access key\nAwsRegion: 设置连接 AWS 的区域\n数据库名：输入连接 ATHENA 的数据库名称\nJdbc 连接参数：用于 ATHENA 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\nJDBC驱动配置参考文档 athena-connect-with-jdbc\n驱动下载链接 SimbaAthenaJDBC-2.0.31.1000/AthenaJDBC42.jar\n\n",
     "version": "dev",
     "link": "/guide/datasource/athena",
     "title": "AWS Athena 数据源",
@@ -34333,7 +34333,7 @@
     ]
   },
   {
-    "content": "AZURE SQL 数据源\n模式\nSqlPassword\n\n使用数据库服务器的用户名和密码验证。\n\n数据源：选择 AZURE SQL\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 AZURE SQL 的 HOST 或 IP ，例如：xxx.database.windows.net\n端口：输入连接 AZURE SQL 的端口，默认1433\n验证模式：输入 AZURE SQL 的连接模式，目前支持：SqlPassword,ActiveDirectoryPassword,ActiveDirectoryMSI,ActiveDirectoryServicePrincipal,accessToken.\n用户名：设置连接 AZURE SQL 的用户名\n密码：设置连接 AZURE SQL 的密码\n数据库名：输入连接 AZURE SQL 的数据库名称\nJdbc 连接参数：用于 AZURE SQL 连接的参数设置，以 JSON 形式填写\n以下仅对差异化属性进行说明。\n\nActiveDirectoryPassword\n\n采用Azure AD账号名和密码验证。\n前置条件：设置AD账号为数据库AD管理员。\n\n\nAzure AD用户名：Azure AD 的账号名，例如：[xx@xx.onmicrosoft.com]\n密码：Azure AD 的密码\n\nActiveDirectoryMSI\n\n采用AZURE内部服务器验证。\n前置条件：先设置内部服务器为数据库AD管理员再进行请求，MSIClientId是服务器的id，是不必要的。\n\n\n\nMSIClientId：选择ActiveDirectoryMSI模式下的内部资源（例如 Azure 虚拟机、应用服务或与 Azure Active Directory 联合的函数应用）的clientId\n\nActiveDirectoryServicePrincipal\n\n采用应用的应用程序(客户端) ID和密钥进行验证。\n前置条件：先设置应用为数据库AD管理员,同时给应用设置客户端密码，最终使用两者新建数据源。\n\n\nclientId： ActiveDirectoryServicePrincipal模式下，应用的应用程序(客户端) ID\nclientSecret：ActiveDirectoryServicePrincipal模式下，应用的应用程序客户端密码\n\naccessToken\n\n采用应用的应用程序(客户端) ID和密钥去请求临时token，然后仅采用token进行连接，非jdbc连接。\n\n\nclientId： accessToken模式下，应用的应用程序(客户端) ID\nclientSecret：accessToken模式下，应用的应用程序客户端密码\nOAuth 2.0 令牌终结点：accessToken模式下，应用的OAuth 2.0 令牌终结点(v2)\n\n是否原生支持\n是，数据源不需要任务附加操作即可使用。\n",
+    "content": "AZURE SQL 数据源\n模式\nSqlPassword\n\n使用数据库服务器的用户名和密码验证。\n\n数据源：选择 AZURE SQL\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 AZURE SQL 的 HOST 或 IP ，例如：xxx.database.windows.net\n端口：输入连接 AZURE SQL 的端口，默认1433\n验证模式：输入 AZURE SQL 的连接模式，目前支持：SqlPassword,ActiveDirectoryPassword,ActiveDirectoryMSI,ActiveDirectoryServicePrincipal,accessToken.\n用户名：设置连接 AZURE SQL 的用户名\n密码：设置连接 AZURE SQL 的密码\n数据库名：输入连接 AZURE SQL 的数据库名称\nJdbc 连接参数：用于 AZURE SQL 连接的参数设置，以 JSON 形式填写\n以下仅对差异化属性进行说明。\n\nActiveDirectoryPassword\n\n采用Azure AD账号名和密码验证。\n前置条件：设置AD账号为数据库AD管理员。\n\n\nAzure AD用户名：Azure AD 的账号名，例如：[xx@xx.onmicrosoft.com]\n密码：Azure AD 的密码\n\nActiveDirectoryMSI\n\n采用AZURE内部服务器验证。\n前置条件：先设置内部服务器为数据库AD管理员再进行请求，MSIClientId是服务器的id，是不必要的。\n\n\n\nMSIClientId：选择ActiveDirectoryMSI模式下的内部资源（例如 Azure 虚拟机、应用服务或与 Azure Active Directory 联合的函数应用）的clientId\n\nActiveDirectoryServicePrincipal\n\n采用应用的应用程序(客户端) ID和密钥进行验证。\n前置条件：先设置应用为数据库AD管理员,同时给应用设置客户端密码，最终使用两者新建数据源。\n\n\nclientId： ActiveDirectoryServicePrincipal模式下，应用的应用程序(客户端) ID\nclientSecret：ActiveDirectoryServicePrincipal模式下，应用的应用程序客户端密码\n\naccessToken\n\n采用应用的应用程序(客户端) ID和密钥去请求临时token，然后仅采用token进行连接，非jdbc连接。\n\n\nclientId： accessToken模式下，应用的应用程序(客户端) ID\nclientSecret：accessToken模式下，应用的应用程序客户端密码\nOAuth 2.0 令牌终结点：accessToken模式下，应用的OAuth 2.0 令牌终结点(v2)\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n驱动下载链接 mssql-jdbc-11.2.1.jre8\n\n",
     "version": "dev",
     "link": "/guide/datasource/azure-sql",
     "title": "AZURE SQL 数据源",
@@ -34344,7 +34344,7 @@
     ]
   },
   {
-    "content": "Amazon Redshift\n数据源参数\n使用数据库服务器的用户名和密码验证。\n\n数据源：选择 AZURE Redshift\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 Redshift 的 HOST 或 IP ，例如：cluster-name.xxx.region.redshift.amazonaws.com.cn\n端口：输入连接 Redshift 的端口，默认5439\n验证模式：输入 Redshift 的连接模式，目前支持：Password,IAM-accessKey\n用户名：设置连接 Redshift 的用户名\n密码：设置连接 Redshift 的密码\n数据库名：输入连接 Redshift 的数据库名称\nJdbc 连接参数：用于 Redshift 连接的参数设置，以 JSON 形式填写\nAccessKeyID：IAM-accessKey模式下的access key ID\nSecretAccessKey：IAM-accessKey模式下的secret access key\n\n验证: Password\n\n使用Redshift数据库的用户名和密码验证。\n验证: IAM-accessKey\n\n\n使用 cluster ID, AWS Region, port(可选) and IAM信息来登录。\n是否原生支持\n是，数据源不需要任务附加操作即可使用。\n参考更多关于Redshift相关的JDBC文档校验模式\n",
+    "content": "Amazon Redshift\n数据源参数\n使用数据库服务器的用户名和密码验证。\n\n数据源：选择 AZURE Redshift\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 Redshift 的 HOST 或 IP ，例如：cluster-name.xxx.region.redshift.amazonaws.com.cn\n端口：输入连接 Redshift 的端口，默认5439\n验证模式：输入 Redshift 的连接模式，目前支持：Password,IAM-accessKey\n用户名：设置连接 Redshift 的用户名\n密码：设置连接 Redshift 的密码\n数据库名：输入连接 Redshift 的数据库名称\nJdbc 连接参数：用于 Redshift 连接的参数设置，以 JSON 形式填写\nAccessKeyID：IAM-accessKey模式下的access key ID\nSecretAccessKey：IAM-accessKey模式下的secret access key\n\n验证: Password\n\n使用Redshift数据库的用户名和密码验证。\n验证: IAM-accessKey\n\n\n使用 cluster ID, AWS Region, port(可选) and IAM信息来登录。\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n参考更多关于Redshift相关的JDBC文档校验模式\n\n",
     "version": "dev",
     "link": "/guide/datasource/redshift",
     "title": "Amazon Redshift",
@@ -34355,7 +34355,7 @@
     ]
   },
   {
-    "content": "Oracle数据源\n\n\n数据源：选择 ORACLE\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 ORACLE 的 IP\n端口：输入连接 ORACLE 的端口\n用户名：设置连接 ORACLE 的用户名\n密码：设置连接 ORACLE 的密码\n数据库名：输入连接 ORACLE 的 ServiceName 或 SID\nJdbc 连接参数：用于 ORACLE 连接的参数设置，以 JSON 形式填写\n\n比如 {&quot;schema&quot;: &quot;abc&quot;} 指定使用 username 用户下的 abc 数据库\n\n\n\n",
+    "content": "Oracle数据源\n\n\n数据源：选择 ORACLE\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 ORACLE 的 IP\n端口：输入连接 ORACLE 的端口\n用户名：设置连接 ORACLE 的用户名\n密码：设置连接 ORACLE 的密码\n数据库名：输入连接 ORACLE 的 ServiceName 或 SID\nJdbc 连接参数：用于 ORACLE 连接的参数设置，以 JSON 形式填写\n\n比如 {&quot;schema&quot;: &quot;abc&quot;} 指定使用 username 用户下的 abc 数据库\n\n\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n\n",
     "version": "dev",
     "link": "/guide/datasource/oracle",
     "title": "Oracle数据源",
@@ -34366,7 +34366,7 @@
     ]
   },
   {
-    "content": "Trino数据源\n\n\n数据源：选择 TRINO\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 TRINO 的 IP\n端口：输入连接 TRINO 的端口\n用户名：设置连接 TRINO 的用户名\n密码：设置连接 TRINO 的密码\n数据库名：输入连接 TRINO 的数据库名称\nJdbc 连接参数：用于 TRINO 连接的参数设置，以 JSON 形式填写\n数据源定义: 定义数据源是否为测试数据源或上线数据源\n\n是否原生支持\n是，数据源不需要任务附加操作即可使用。\n",
+    "content": "Trino数据源\n\n\n数据源：选择 TRINO\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 TRINO 的 IP\n端口：输入连接 TRINO 的端口\n用户名：设置连接 TRINO 的用户名\n密码：设置连接 TRINO 的密码\n数据库名：输入连接 TRINO 的数据库名称\nJdbc 连接参数：用于 TRINO 连接的参数设置，以 JSON 形式填写\n数据源定义: 定义数据源是否为测试数据源或上线数据源\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n\n",
     "version": "dev",
     "link": "/guide/datasource/trino",
     "title": "Trino数据源",
@@ -34377,7 +34377,7 @@
     ]
   },
   {
-    "content": "StarRocks数据源\n\n\n数据源：选择 STARROCKS\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 STARROCKS 的 IP\n端口：输入连接 STARROCKS 的端口\n用户名：设置连接 STARROCKS 的用户名\n密码：设置连接 STARROCKS 的密码\n数据库名：输入连接 STARROCKS 的数据库名称\nJdbc 连接参数：用于 STARROCKS 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n否，StarRocks使用Mysql JDBC Driver, 使用前需请参考 数据源配置 中的 &quot;数据源中心&quot; 章节激活Mysql JDBC Driver。\n",
+    "content": "StarRocks数据源\n\n\n数据源：选择 STARROCKS\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 STARROCKS 的 IP\n端口：输入连接 STARROCKS 的端口\n用户名：设置连接 STARROCKS 的用户名\n密码：设置连接 STARROCKS 的密码\n数据库名：输入连接 STARROCKS 的数据库名称\nJdbc 连接参数：用于 STARROCKS 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n驱动下载链接，mysql-connector-j-8.0.33\n\n",
     "version": "dev",
     "link": "/guide/datasource/starrocks",
     "title": "StarRocks数据源",
@@ -34388,7 +34388,7 @@
     ]
   },
   {
-    "content": "DAMENG数据源\n\n\n数据源：选择 DAMENG\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 DAMENG 的 IP\n端口：输入连接 DAMENG 的端口\n用户名：设置连接 DAMENG 的用户名\n密码：设置连接 DAMENG 的密码\n数据库名：输入连接 DAMENG 的 schema\nJdbc 连接参数：用于 DAMENG 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n否，使用前需请参考 数据源配置 中的 &quot;数据源中心&quot; 章节激活数据源。\n",
+    "content": "DAMENG数据源\n\n\n数据源：选择 DAMENG\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 DAMENG 的 IP\n端口：输入连接 DAMENG 的端口\n用户名：设置连接 DAMENG 的用户名\n密码：设置连接 DAMENG 的密码\n数据库名：输入连接 DAMENG 的 schema\nJdbc 连接参数：用于 DAMENG 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n\n",
     "version": "dev",
     "link": "/guide/datasource/dameng",
     "title": "DAMENG数据源",
@@ -34399,7 +34399,7 @@
     ]
   },
   {
-    "content": "OceanBase 数据源\n\n\n数据源：选择 OCEANBASE\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 OceanBase 的 IP\n端口：输入连接 OceanBase 的端口\n用户名：设置连接 OceanBase 的用户名\n密码：设置连接 OceanBase 的密码\n数据库名：输入连接 OceanBase 的数据库名称\n兼容模式：输入连接 OceanBase 的兼容模式\nJdbc 连接参数：用于 OceanBase 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n否，使用前需要先引入 OceanBase 的 JDBC 驱动 oceanbase-client，请参考 数据源配置 中的 &quot;数据源中心&quot; 章节。\nOceanBase 数据源的兼容模式可以是 'mysql' 或 'oracle'，如果你只使用 mysql 模式，你也可以选择将 OceanBase 数据源当作 MySQL 数据源来使用，请参考 MySQL 数据源\n",
+    "content": "OceanBase 数据源\n\n\n数据源：选择 OCEANBASE\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 OceanBase 的 IP\n端口：输入连接 OceanBase 的端口\n用户名：设置连接 OceanBase 的用户名\n密码：设置连接 OceanBase 的密码\n数据库名：输入连接 OceanBase 的数据库名称\n兼容模式：输入连接 OceanBase 的兼容模式\nJdbc 连接参数：用于 OceanBase 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n\n否，使用前需要先引入 OceanBase 的 JDBC 驱动 oceanbase-client，请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\nOceanBase 数据源的兼容模式可以是 'mysql' 或 'oracle'，如果你只使用 mysql 模式，你也可以选择将 OceanBase 数据源当作 MySQL 数据源来使用，请参考 MySQL 数据源\n\n",
     "version": "dev",
     "link": "/guide/datasource/oceanbase",
     "title": "OceanBase 数据源",
@@ -34410,7 +34410,7 @@
     ]
   },
   {
-    "content": "SSH 数据源\n该数据源用于RemoteShell组件，用于远程执行命令。\n\n\n数据源：选择 SSH\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 SSH 的 IP\n端口：输入连接 SSH 的端口\n用户名：设置连接 SSH 的用户名\n密码：设置连接 SSH 的密码\n公钥：设置连接 SSH 的公钥\n\n",
+    "content": "SSH 数据源\n该数据源用于RemoteShell组件，用于远程执行命令。\n\n\n数据源：选择 SSH\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 SSH 的 IP\n端口：输入连接 SSH 的端口\n用户名：设置连接 SSH 的用户名\n密码：设置连接 SSH 的密码\n公钥：设置连接 SSH 的公钥\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n\n",
     "version": "dev",
     "link": "/guide/datasource/ssh",
     "title": "SSH 数据源",
@@ -34421,7 +34421,7 @@
     ]
   },
   {
-    "content": "Databend\n\n数据源参数\n\n\n\n数据源\n描述\n\n\n\n\n数据源\n选择 DATABEND。\n\n\n数据源名称\n输入数据源的名称。\n\n\n描述\n输入数据源的描述。\n\n\nIP/主机名\n输入 DATABEND 服务的 IP 地址。\n\n\n端口\n输入 DATABEND 服务的端口。\n\n\n用户名\n设置 DATABEND 连接的用户名。\n\n\n密码\n设置 DATABEND 连接的密码。\n\n\n数据库名称\n输入 DATABEND 连接的数据库名称。\n\n\njdbc 连接参数\nDATABEND 连接的参数设置，以 JSON 格式表示。\n\n\n\njdbc 连接参数可参考 databend-jdbc\n是否原生支持\n是，数据源不需要任务附加操作即可使用。\n",
+    "content": "Databend\n\n数据源参数\n\n\n\n数据源\n描述\n\n\n\n\n数据源\n选择 DATABEND。\n\n\n数据源名称\n输入数据源的名称。\n\n\n描述\n输入数据源的描述。\n\n\nIP/主机名\n输入 DATABEND 服务的 IP 地址。\n\n\n端口\n输入 DATABEND 服务的端口。\n\n\n用户名\n设置 DATABEND 连接的用户名。\n\n\n密码\n设置 DATABEND 连接的密码。\n\n\n数据库名称\n输入 DATABEND 连接的数据库名称。\n\n\njdbc 连接参数\nDATABEND 连接的参数设置，以 JSON 格式表示。\n\n\n\njdbc 连接参数可参考 databend-jdbc\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n\n",
     "version": "dev",
     "link": "/guide/datasource/databend",
     "title": "Databend",
@@ -34432,7 +34432,7 @@
     ]
   },
   {
-    "content": "HANA 数据源\n\n\n数据源：选择 HANA\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 HANA 的 IP\n端口：输入连接 HANA 的端口\n用户名：设置连接 HANA 的用户名\n密码：设置连接 HANA 的密码\n数据库名：输入连接 HANA 的数据库名称\nJdbc 连接参数：用于 HANA 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n否，使用前需请参考 数据源配置 中的 &quot;数据源中心&quot; 章节激活数据源。\n",
+    "content": "HANA 数据源\n\n\n数据源：选择 HANA\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 HANA 的 IP\n端口：输入连接 HANA 的端口\n用户名：设置连接 HANA 的用户名\n密码：设置连接 HANA 的密码\n数据库名：输入连接 HANA 的数据库名称\nJdbc 连接参数：用于 HANA 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n\n",
     "version": "dev",
     "link": "/guide/datasource/hana",
     "title": "HANA 数据源",
@@ -34443,7 +34443,7 @@
     ]
   },
   {
-    "content": "DORIS 数据源\n\n\n数据源：选择 DORIS\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 DORIS 的 IP(如有多个IP，请用,分隔)\n端口：输入连接 DORIS 的端口\n用户名：设置连接 DORIS 的用户名\n密码：设置连接 DORIS 的密码\n数据库名：输入连接 DORIS 的数据库名称\nJdbc 连接参数：用于 DORIS 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n否，使用前需请参考 数据源配置 中的 &quot;数据源中心&quot; 章节激活数据源。\n",
+    "content": "DORIS 数据源\n\n\n数据源：选择 DORIS\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 DORIS 的 IP(如有多个IP，请用,分隔)\n端口：输入连接 DORIS 的端口\n用户名：设置连接 DORIS 的用户名\n密码：设置连接 DORIS 的密码\n数据库名：输入连接 DORIS 的数据库名称\nJdbc 连接参数：用于 DORIS 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n驱动下载链接，mysql-connector-j-8.0.33\n\n",
     "version": "dev",
     "link": "/guide/datasource/doris",
     "title": "DORIS 数据源",
@@ -34454,7 +34454,7 @@
     ]
   },
   {
-    "content": "VERTICA 数据源\n\n\n\n\n参数名称\n参数描述\n\n\n\n\n数据源\n选择 VERTICA\n\n\n数据源名称\n输入数据源的名称\n\n\n描述\n输入数据源的描述\n\n\nIP 主机名\n输入连接 VERTICA 的 IP\n\n\n端口\n输入连接 VERTICA 的端口\n\n\n用户名\n设置连接 VERTICA 的用户名\n\n\n密码\n设置连接 VERTICA 的密码\n\n\n数据库名\n输入连接 VERTICA 的数据库名称\n\n\nJDBC 连接参数\n用于 VERTICA 连接的参数设置，以 JSON 形式填写\n\n\n\n是否原生支持\n是，数据源不需要任务附加操作即可使用。\n",
+    "content": "VERTICA 数据源\n\n\n\n\n参数名称\n参数描述\n\n\n\n\n数据源\n选择 VERTICA\n\n\n数据源名称\n输入数据源的名称\n\n\n描述\n输入数据源的描述\n\n\nIP 主机名\n输入连接 VERTICA 的 IP\n\n\n端口\n输入连接 VERTICA 的端口\n\n\n用户名\n设置连接 VERTICA 的用户名\n\n\n密码\n设置连接 VERTICA 的密码\n\n\n数据库名\n输入连接 VERTICA 的数据库名称\n\n\nJDBC 连接参数\n用于 VERTICA 连接的参数设置，以 JSON 形式填写\n\n\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\n\n",
     "version": "dev",
     "link": "/guide/datasource/vertica",
     "title": "VERTICA 数据源",
@@ -34465,7 +34465,7 @@
     ]
   },
   {
-    "content": "DOLPHINDB 数据源\n\n\n数据源：选择 DOLPHINDB\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 DOLPHINDB 的 IP\n端口：输入连接 DOLPHINDB 的端口\n用户名：设置连接 DOLPHINDB 的用户名\n密码：设置连接 DOLPHINDB 的密码\nJDBC 连接参数：用于 DOLPHINDB 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n\n否，使用前需请参考 数据源配置 中的 &quot;数据源中心&quot; 章节激活数据源。\nJDBC驱动配置参考文档 DolphinDB JDBC Connector\n驱动Maven依赖 com.dolphindb:jdbc:3.00.3.0\n\n",
+    "content": "DOLPHINDB 数据源\n\n\n数据源：选择 DOLPHINDB\n数据源名称：输入数据源的名称\n描述：输入数据源的描述\nIP 主机名：输入连接 DOLPHINDB 的 IP\n端口：输入连接 DOLPHINDB 的端口\n用户名：设置连接 DOLPHINDB 的用户名\n密码：设置连接 DOLPHINDB 的密码\nJDBC 连接参数：用于 DOLPHINDB 连接的参数设置，以 JSON 形式填写\n\n是否原生支持\n\n否，使用前需请参考 pseudo-cluster 中的 &quot;下载插件依赖&quot; 章节激活数据源。\nJDBC驱动配置参考文档 DolphinDB JDBC Connector\n驱动Maven依赖 com.dolphindb:jdbc:3.00.3.0\n\n",
     "version": "dev",
     "link": "/guide/datasource/dolphindb",
     "title": "DOLPHINDB 数据源",
@@ -34736,7 +34736,7 @@
     ]
   },
   {
-    "content": "Standalone 极速体验版\nStandalone 仅适用于 DolphinScheduler 的快速体验.\n如果你是新手，想要体验 DolphinScheduler 的功能，推荐使用 Standalone 方式体检。如果你想体验更完整的功能，或者更大的任务量，推荐使用伪集群部署。如果你是在生产中使用，推荐使用集群部署或者kubernetes\n\n注意: Standalone 仅建议 20 个以下工作流使用，因为其采用内存式的 H2 Database, Zookeeper Testing Server，任务过多可能导致不稳定，并且如果重启或者停止 standalone-server 会导致内存中数据库里的数据清空。\nStandalone 支持元数据持久化，但是需要使用外部数据库，如 mysql 或者 postgresql，请看配置数据库\n\n前置准备工作\n\nJDK：下载JDK (1.8 or 11)，安装并配置 JAVA_HOME 环境变量，并将其下的 bin 目录追加到 PATH 环境变量中。如果你的环境中已存在，可以跳过这步。\n二进制包：在下载页面下载 DolphinScheduler 二进制包  \n\n下载插件依赖\n请参考伪集群部署的下载插件依赖\n配置用户免密及权限\n创建部署用户，并且一定要配置 sudo 免密。以创建 dolphinscheduler 用户为例\n# 创建用户需使用 root 登录\nuseradd dolphinscheduler\n\n# 添加密码\necho &quot;dolphinscheduler&quot; | passwd --stdin dolphinscheduler\n\n# 配置 sudo 免密\nsed -i &#x27;$adolphinscheduler  ALL=(ALL)  NOPASSWD: NOPASSWD: ALL&#x27; /etc/sudoers\nsed -i &#x27;s/Defaults    requiretty/#Defaults    requiretty/g&#x27; /etc/sudoers\n\n# 修改目录权限，使得部署用户对二进制包解压后的 apache-dolphinscheduler-*-bin 目录有操作权限\nchown -R dolphinscheduler:dolphinscheduler apache-dolphinscheduler-*-bin\nchmod -R 755 apache-dolphinscheduler-*-bin\n\n\n注意:\n\n因为任务执行服务是以 sudo -u {linux-user} -i 切换不同 linux 用户的方式来实现多租户运行作业，所以部署用户需要有 sudo 权限，而且是免密的。初学习者不理解的话，完全可以暂时忽略这一点\n如果发现 /etc/sudoers 文件中有 &quot;Defaults requiretty&quot; 这行，也请注释掉\n\n\n启动 DolphinScheduler Standalone Server\n解压并启动 DolphinScheduler\n二进制压缩包中有 standalone 启动的脚本，解压后即可快速启动。\n# 解压并运行 Standalone Server\ntar -xvzf apache-dolphinscheduler-*-bin.tar.gz\nchmod -R 755 apache-dolphinscheduler-*-bin\ncd apache-dolphinscheduler-*-bin\nbash ./bin/dolphinscheduler-daemon.sh start standalone-server\n\n登录 DolphinScheduler\n浏览器访问地址 http://localhost:12345/dolphinscheduler/ui 即可登录系统 UI。默认的用户名和密码是 admin/dolphinscheduler123\n\n启停服务\n脚本 ./bin/dolphinscheduler-daemon.sh 除了可以快捷启动 standalone 外，还能停止服务运行，全部命令如下\n# 启动 Standalone Server 服务\nbash ./bin/dolphinscheduler-daemon.sh start standalone-server\n# 停止 Standalone Server 服务\nbash ./bin/dolphinscheduler-daemon.sh stop standalone-server\n# 查看 Standalone Server 状态\nbash ./bin/dolphinscheduler-daemon.sh status standalone-server\n\n\n注意: Python 网关服务默认为关闭状态，如果您想启动 Python 网关服务，\n请修改 YAML 配置文件，将 python-gateway.enabled 设置为 true，\n配置文件路径为 api-server/conf/application.yaml\n\n配置数据库\nStandalone server 使用 H2 数据库作为其元数据存储数据，这是为了上手简单，用户在启动服务器之前不需要启动数据库。但是如果用户想将元数据库存储在\nMySQL 或 PostgreSQL 等其他数据库中，必须更改一些配置。请参考 数据源配置 Standalone 切换元数据库 创建并初始化数据库\n\n注意: DS默认使用本地模式的目录 /tmp/dolphinscheduler 作为资源中心, 如果需要修改资源中心目录, 请修改配置文件 conf/common.properties 中 resource 的相关配置项\n\n",
+    "content": "Standalone 极速体验版\nStandalone 仅适用于 DolphinScheduler 的快速体验.\n如果你是新手，想要体验 DolphinScheduler 的功能，推荐使用 Standalone 方式体检。如果你想体验更完整的功能，或者更大的任务量，推荐使用伪集群部署。如果你是在生产中使用，推荐使用集群部署或者kubernetes\n\n注意: Standalone 仅建议 20 个以下工作流使用，因为其采用内存式的 H2 Database, Zookeeper Testing Server，任务过多可能导致不稳定，并且如果重启或者停止 standalone-server 会导致内存中数据库里的数据清空。\nStandalone 支持元数据持久化，但是需要使用外部数据库，如 mysql 或者 postgresql，请看配置数据库\n\n前置准备工作\n\nJDK：下载JDK (1.8 or 11)，安装并配置 JAVA_HOME 环境变量，并将其下的 bin 目录追加到 PATH 环境变量中。如果你的环境中已存在，可以跳过这步。\n二进制包：在下载页面下载 DolphinScheduler 二进制包  \n\n下载插件依赖\n请参考伪集群部署的下载插件依赖，注意 standalone 最小化运行需要下载插件依赖 dolphinscheduler-task-shell 和 dolphinscheduler-storage-hdfs\n配置用户免密及权限\n创建部署用户，并且一定要配置 sudo 免密。以创建 dolphinscheduler 用户为例\n# 创建用户需使用 root 登录\nuseradd dolphinscheduler\n\n# 添加密码\necho &quot;dolphinscheduler&quot; | passwd --stdin dolphinscheduler\n\n# 配置 sudo 免密\nsed -i &#x27;$adolphinscheduler  ALL=(ALL)  NOPASSWD: NOPASSWD: ALL&#x27; /etc/sudoers\nsed -i &#x27;s/Defaults    requiretty/#Defaults    requiretty/g&#x27; /etc/sudoers\n\n# 修改目录权限，使得部署用户对二进制包解压后的 apache-dolphinscheduler-*-bin 目录有操作权限\nchown -R dolphinscheduler:dolphinscheduler apache-dolphinscheduler-*-bin\nchmod -R 755 apache-dolphinscheduler-*-bin\n\n\n注意:\n\n因为任务执行服务是以 sudo -u {linux-user} -i 切换不同 linux 用户的方式来实现多租户运行作业，所以部署用户需要有 sudo 权限，而且是免密的。初学习者不理解的话，完全可以暂时忽略这一点\n如果发现 /etc/sudoers 文件中有 &quot;Defaults requiretty&quot; 这行，也请注释掉\n\n\n启动 DolphinScheduler Standalone Server\n解压并启动 DolphinScheduler\n二进制压缩包中有 standalone 启动的脚本，解压后即可快速启动。\n# 解压并运行 Standalone Server\ntar -xvzf apache-dolphinscheduler-*-bin.tar.gz\nchmod -R 755 apache-dolphinscheduler-*-bin\ncd apache-dolphinscheduler-*-bin\nbash ./bin/dolphinscheduler-daemon.sh start standalone-server\n\n登录 DolphinScheduler\n浏览器访问地址 http://localhost:12345/dolphinscheduler/ui 即可登录系统 UI。默认的用户名和密码是 admin/dolphinscheduler123\n\n启停服务\n脚本 ./bin/dolphinscheduler-daemon.sh 除了可以快捷启动 standalone 外，还能停止服务运行，全部命令如下\n# 启动 Standalone Server 服务\nbash ./bin/dolphinscheduler-daemon.sh start standalone-server\n# 停止 Standalone Server 服务\nbash ./bin/dolphinscheduler-daemon.sh stop standalone-server\n# 查看 Standalone Server 状态\nbash ./bin/dolphinscheduler-daemon.sh status standalone-server\n\n\n注意: Python 网关服务默认为关闭状态，如果您想启动 Python 网关服务，\n请修改 YAML 配置文件，将 python-gateway.enabled 设置为 true，\n配置文件路径为 api-server/conf/application.yaml\n\n配置数据库\nStandalone server 使用 H2 数据库作为其元数据存储数据，这是为了上手简单，用户在启动服务器之前不需要启动数据库。但是如果用户想将元数据库存储在\nMySQL 或 PostgreSQL 等其他数据库中，必须更改一些配置。请参考 数据源配置 Standalone 切换元数据库 创建并初始化数据库\n\n注意: DS默认使用本地模式的目录 /tmp/dolphinscheduler 作为资源中心, 如果需要修改资源中心目录, 请修改配置文件 conf/common.properties 中 resource 的相关配置项\n\n",
     "version": "dev",
     "link": "/guide/installation/standalone",
     "title": "Standalone 极速体验版",
@@ -34746,7 +34746,7 @@
     ]
   },
   {
-    "content": "伪集群部署\n伪集群部署目的是在单台机器部署 DolphinScheduler 服务，该模式下 master、worker、api server 都在同一台机器上\n如果你是新手，想要体验 DolphinScheduler 的功能，推荐使用Standalone方式体检。如果你想体验更完整的功能，或者更大的任务量，推荐使用伪集群部署。如果你是在生产中使用，推荐使用集群部署或者kubernetes\n前置准备工作\n伪分布式部署 DolphinScheduler 需要有外部软件的支持\n\nJDK：下载JDK (1.8 或者 11)，安装并配置 JAVA_HOME 环境变量，并将其下的 bin 目录追加到 PATH 环境变量中。如果你的环境中已存在，可以跳过这步。\n二进制包：在下载页面下载 DolphinScheduler 二进制包\n数据库：PostgreSQL (8.2.15+) 或者 MySQL (5.7+)，两者任选其一即可，如 MySQL 则需要 JDBC Driver 8.0.33\n注册中心：当前支持 ZooKeeper (3.8.0)，MYSQL(8.0.33)，ETCD\n进程树分析\n\nmacOS 安装pstree\nFedora/Red/Hat/CentOS/Ubuntu/Debian 安装psmisc\n\n\n\n下载插件依赖\n从 3.3.0 版本开始，二进制包不再提供插件依赖，需要用户自行下载。插件依赖包下载地址：插件依赖包\n你也可以执行以下命令来安装插件依赖:\nbash ./bin/install-plugins.sh 3.3.0\n\n通常你并不需要所有的连接器插件，可以通过配置 conf/plugins_config 来指定你所需要的插件，例如，你只需要 dolphinscheduler-task-shell 插件，那么您可以修改配置文件如下：\n--task-plugins--\ndolphinscheduler-task-shell\n--end--\n\n准备 DolphinScheduler 启动环境\n\n注意: DolphinScheduler 本身不依赖 Hadoop、Hive、Spark，但如果你运行的任务需要依赖他们，就需要有对应的环境支持\n\n配置用户免密及权限\n创建部署用户，并且一定要配置 sudo 免密。以创建 dolphinscheduler 用户为例\n# 创建用户需使用 root 登录\nuseradd dolphinscheduler\n\n# 添加密码\necho &quot;dolphinscheduler&quot; | passwd --stdin dolphinscheduler\n\n# 配置 sudo 免密\nsed -i &#x27;$adolphinscheduler  ALL=(ALL)  NOPASSWD: NOPASSWD: ALL&#x27; /etc/sudoers\nsed -i &#x27;s/Defaults    requiretty/#Defaults    requiretty/g&#x27; /etc/sudoers\n\n# 修改目录权限，使得部署用户对二进制包解压后的 apache-dolphinscheduler-*-bin 目录有操作权限\nchown -R dolphinscheduler:dolphinscheduler apache-dolphinscheduler-*-bin\nchmod -R 755 apache-dolphinscheduler-*-bin\n\n\n注意:\n\n因为任务执行服务是以 sudo -u {linux-user} -i 切换不同 linux 用户的方式来实现多租户运行作业，所以部署用户需要有 sudo 权限，而且是免密的。初学习者不理解的话，完全可以暂时忽略这一点\n如果发现 /etc/sudoers 文件中有 &quot;Defaults requiretty&quot; 这行，也请注释掉\n\n\n准备 zookeeper\n如果使用 Zookeeper 作为注册中心，需要先安装 Zookeeper 并启动。\n修改相关配置\n完成基础环境的准备后，需要根据你的机器环境修改配置文件。配置文件可以在目录 bin/env/dolphinscheduler_env.sh，api-server/conf/application.yaml，\nmaster-server/conf/application.yaml，worker-server/conf/application.yaml，alert-server/conf/application.yaml 中找到。\n修改 dolphinscheduler_env.sh 文件\n文件 ./bin/env/dolphinscheduler_env.sh 描述了下列配置：\n\nDolphinScheduler 的数据库配置，详细配置方法见[初始化数据库]\n一些任务类型外部依赖路径或库文件，如 JAVA_HOME 和 SPARK_HOME都是在这里定义的\n默认的注册中心是 mysql\n服务器相关配置，如缓存类型、时区等\n\n如果您不使用某些任务类型，您可以忽略任务外部依赖项，但您必须根据您的环境更改 JAVA_HOME、注册中心和数据库相关配置。\n# JAVA_HOME, will use it to start DolphinScheduler server\nexport JAVA_HOME=${JAVA_HOME:-/opt/soft/java}\n\n# Database related configuration, set database type, username and password\nexport DATABASE=${DATABASE:-postgresql}\nexport SPRING_PROFILES_ACTIVE=${DATABASE}\nexport SPRING_DATASOURCE_URL=&quot;jdbc:postgresql://127.0.0.1:5432/dolphinscheduler&quot;\nexport SPRING_DATASOURCE_USERNAME={user}\nexport SPRING_DATASOURCE_PASSWORD={password}\n\n# DolphinScheduler server related configuration\nexport SPRING_CACHE_TYPE=${SPRING_CACHE_TYPE:-none}\nexport SPRING_JACKSON_TIME_ZONE=${SPRING_JACKSON_TIME_ZONE:-UTC}\n\n# Registry center configuration, determines the type and link of the registry center\nexport REGISTRY_TYPE=${REGISTRY_TYPE:-zookeeper}\nexport REGISTRY_ZOOKEEPER_CONNECT_STRING=${REGISTRY_ZOOKEEPER_CONNECT_STRING:-localhost:2181}\n\n# Tasks related configurations, need to change the configuration if you use the related tasks.\nexport HADOOP_HOME=${HADOOP_HOME:-/opt/soft/hadoop}\nexport HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-/opt/soft/hadoop/etc/hadoop}\nexport SPARK_HOME=${SPARK_HOME:-/opt/soft/spark}\nexport PYTHON_LAUNCHER=${PYTHON_LAUNCHER:-/opt/soft/python}\nexport HIVE_HOME=${HIVE_HOME:-/opt/soft/hive}\nexport FLINK_HOME=${FLINK_HOME:-/opt/soft/flink}\nexport DATAX_LAUNCHER=${DATAX_LAUNCHER:-/opt/soft/datax/bin/python3}\n\nexport PATH=$HADOOP_HOME/bin:$SPARK_HOME/bin:$PYTHON_LAUNCHER:$JAVA_HOME/bin:$HIVE_HOME/bin:$FLINK_HOME/bin:$DATAX_LAUNCHER:$PATH\n\n\n注意: 如果您使用的是 MySQL 数据库，需要将 DATABASE 设置为 mysql，并且修改 SPRING_DATASOURCE_URL、SPRING_DATASOURCE_USERNAME 和 SPRING_DATASOURCE_PASSWORD 为您的数据库配置\n注意: dolphinscheduler_env.sh 文件中的配置会覆盖各个服务的配置文件(application.yaml)中的配置，所以如果您在配置文件中配置了某个参数，\n而且在 dolphinscheduler_env.sh 文件中也配置了，那么以 dolphinscheduler_env.sh 文件中的配置为准。dolphinscheduler_env.sh 里的配置项格式样例:\nSPRING_DATASOURCE_URL 在 application.yaml 为 spring.datasource.url，以此类推\n\n初始化数据库\n请参考 数据源配置 伪分布式/分布式安装初始化数据库 创建并初始化数据库\n启动 DolphinScheduler\n部署后的运行日志将存放在 xxx-server/logs 文件夹内\n# 启动 api-server\nbash ./bin/dolphinscheduler-daemon.sh start api-server\n\n# 启动 master-server\nbash ./bin/dolphinscheduler-daemon.sh start master-server\n\n# 启动 worker-server\nbash ./bin/dolphinscheduler-daemon.sh start worker-server\n\n# 启动 alert-server\nbash ./bin/dolphinscheduler-daemon.sh start alert-server\n\n\n\n注意: 第一次部署的话，可以通过 bash ./bin/dolphinscheduler-daemon.sh status xxx-server 来进行服务状态查询\n\n登录 DolphinScheduler\n浏览器访问地址 http://localhost:12345/dolphinscheduler/ui 即可登录系统 UI。默认的用户名和密码是 admin/dolphinscheduler123\n启停服务\n# 查询服务状态\nbash ./bin/dolphinscheduler-daemon.sh status xxx-server\n\n# 启停 Master\nbash ./bin/dolphinscheduler-daemon.sh stop master-server\nbash ./bin/dolphinscheduler-daemon.sh start master-server\n\n# 启停 Worker\nbash ./bin/dolphinscheduler-daemon.sh start worker-server\nbash ./bin/dolphinscheduler-daemon.sh stop worker-server\n\n# 启停 Api\nbash ./bin/dolphinscheduler-daemon.sh start api-server\nbash ./bin/dolphinscheduler-daemon.sh stop api-server\n\n# 启停 Alert\nbash ./bin/dolphinscheduler-daemon.sh start alert-server\nbash ./bin/dolphinscheduler-daemon.sh stop alert-server\n\n\n注意 1:: 每个服务在路径 &lt;service&gt;/conf/dolphinscheduler_env.sh 中都有 dolphinscheduler_env.sh 文件，这是可以为微\n服务需求提供便利。意味着您可以基于不同的环境变量来启动各个服务，只需要在对应服务中配置 &lt;service&gt;/conf/dolphinscheduler_env.sh 然后通过 &lt;service&gt;/bin/start.sh\n命令启动即可。但是如果您使用命令 /bin/dolphinscheduler-daemon.sh start &lt;service&gt; 启动服务器，它将会用文件 bin/env/dolphinscheduler_env.sh\n覆盖 &lt;service&gt;/conf/dolphinscheduler_env.sh 然后启动服务，目的是为了减少用户修改配置的成本.\n注意 2:：服务用途请具体参见《系统架构设计》小节。Python gateway service 默认与 api-server 一起启动，如果您不想启动 Python gateway service\n请通过更改 api-server 配置文件 api-server/conf/application.yaml 中的 python-gateway.enabled : false 来禁用它。\n注意 3:: DS默认使用本地模式的目录 /tmp/dolphinscheduler 作为资源中心, 如果需要修改资源中心目录, 请修改配置文件 conf/common.properties 中 resource 的相关配置项\n\n",
+    "content": "伪集群部署\n伪集群部署目的是在单台机器部署 DolphinScheduler 服务，该模式下 master、worker、api server 都在同一台机器上\n如果你是新手，想要体验 DolphinScheduler 的功能，推荐使用Standalone方式体检。如果你想体验更完整的功能，或者更大的任务量，推荐使用伪集群部署。如果你是在生产中使用，推荐使用集群部署或者kubernetes\n前置准备工作\n伪分布式部署 DolphinScheduler 需要有外部软件的支持\n\nJDK：下载JDK (1.8 或者 11)，安装并配置 JAVA_HOME 环境变量，并将其下的 bin 目录追加到 PATH 环境变量中。如果你的环境中已存在，可以跳过这步。\n二进制包：在下载页面下载 DolphinScheduler 二进制包\n数据库：PostgreSQL (8.2.15+) 或者 MySQL (5.7+)，两者任选其一即可，如 MySQL 则需要 JDBC Driver 8.0.33\n注册中心：当前支持 ZooKeeper (3.8.0)，MYSQL(8.0.33)，ETCD\n进程树分析\n\nmacOS 安装pstree\nFedora/Red/Hat/CentOS/Ubuntu/Debian 安装psmisc\n\n\n\n下载插件依赖\n从 3.3.0 版本开始，二进制包不再提供插件依赖，需要用户自行下载。插件依赖包下载地址：插件依赖包\n你也可以执行以下命令来安装插件依赖:\nbash ./bin/install-plugins.sh 3.3.0\n\n通常你并不需要所有的连接器插件，可以通过配置 conf/plugins_config 来指定你所需要的插件，例如，你只需要 dolphinscheduler-task-shell 插件，那么您可以修改配置文件如下：\n--task-plugins--\ndolphinscheduler-task-shell\n--end--\n\n\n注意: 插件依赖包通常不包含在二进制包中，如果你在启动服务时遇到 ClassNotFoundException 错误，请参考相关插件类型的文档检查是否缺少插件依赖包，例如 dolphinscheduler-datasource-mysql 中不包含 mysql-connector-java.jar\n\n准备 DolphinScheduler 启动环境\n\n注意: DolphinScheduler 本身不依赖 Hadoop、Hive、Spark，但如果你运行的任务需要依赖他们，就需要有对应的环境支持\n\n配置用户免密及权限\n创建部署用户，并且一定要配置 sudo 免密。以创建 dolphinscheduler 用户为例\n# 创建用户需使用 root 登录\nuseradd dolphinscheduler\n\n# 添加密码\necho &quot;dolphinscheduler&quot; | passwd --stdin dolphinscheduler\n\n# 配置 sudo 免密\nsed -i &#x27;$adolphinscheduler  ALL=(ALL)  NOPASSWD: NOPASSWD: ALL&#x27; /etc/sudoers\nsed -i &#x27;s/Defaults    requiretty/#Defaults    requiretty/g&#x27; /etc/sudoers\n\n# 修改目录权限，使得部署用户对二进制包解压后的 apache-dolphinscheduler-*-bin 目录有操作权限\nchown -R dolphinscheduler:dolphinscheduler apache-dolphinscheduler-*-bin\nchmod -R 755 apache-dolphinscheduler-*-bin\n\n\n注意:\n\n因为任务执行服务是以 sudo -u {linux-user} -i 切换不同 linux 用户的方式来实现多租户运行作业，所以部署用户需要有 sudo 权限，而且是免密的。初学习者不理解的话，完全可以暂时忽略这一点\n如果发现 /etc/sudoers 文件中有 &quot;Defaults requiretty&quot; 这行，也请注释掉\n\n\n准备 zookeeper\n如果使用 Zookeeper 作为注册中心，需要先安装 Zookeeper 并启动。\n修改相关配置\n完成基础环境的准备后，需要根据你的机器环境修改配置文件。配置文件可以在目录 bin/env/dolphinscheduler_env.sh，api-server/conf/application.yaml，\nmaster-server/conf/application.yaml，worker-server/conf/application.yaml，alert-server/conf/application.yaml 中找到。\n修改 dolphinscheduler_env.sh 文件\n文件 ./bin/env/dolphinscheduler_env.sh 描述了下列配置：\n\nDolphinScheduler 的数据库配置，详细配置方法见[初始化数据库]\n一些任务类型外部依赖路径或库文件，如 JAVA_HOME 和 SPARK_HOME都是在这里定义的\n默认的注册中心是 mysql\n服务器相关配置，如缓存类型、时区等\n\n如果您不使用某些任务类型，您可以忽略任务外部依赖项，但您必须根据您的环境更改 JAVA_HOME、注册中心和数据库相关配置。\n# JAVA_HOME, will use it to start DolphinScheduler server\nexport JAVA_HOME=${JAVA_HOME:-/opt/soft/java}\n\n# Database related configuration, set database type, username and password\nexport DATABASE=${DATABASE:-postgresql}\nexport SPRING_PROFILES_ACTIVE=${DATABASE}\nexport SPRING_DATASOURCE_URL=&quot;jdbc:postgresql://127.0.0.1:5432/dolphinscheduler&quot;\nexport SPRING_DATASOURCE_USERNAME={user}\nexport SPRING_DATASOURCE_PASSWORD={password}\n\n# DolphinScheduler server related configuration\nexport SPRING_CACHE_TYPE=${SPRING_CACHE_TYPE:-none}\nexport SPRING_JACKSON_TIME_ZONE=${SPRING_JACKSON_TIME_ZONE:-UTC}\n\n# Registry center configuration, determines the type and link of the registry center\nexport REGISTRY_TYPE=${REGISTRY_TYPE:-zookeeper}\nexport REGISTRY_ZOOKEEPER_CONNECT_STRING=${REGISTRY_ZOOKEEPER_CONNECT_STRING:-localhost:2181}\n\n# Tasks related configurations, need to change the configuration if you use the related tasks.\nexport HADOOP_HOME=${HADOOP_HOME:-/opt/soft/hadoop}\nexport HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-/opt/soft/hadoop/etc/hadoop}\nexport SPARK_HOME=${SPARK_HOME:-/opt/soft/spark}\nexport PYTHON_LAUNCHER=${PYTHON_LAUNCHER:-/opt/soft/python}\nexport HIVE_HOME=${HIVE_HOME:-/opt/soft/hive}\nexport FLINK_HOME=${FLINK_HOME:-/opt/soft/flink}\nexport DATAX_LAUNCHER=${DATAX_LAUNCHER:-/opt/soft/datax/bin/python3}\n\nexport PATH=$HADOOP_HOME/bin:$SPARK_HOME/bin:$PYTHON_LAUNCHER:$JAVA_HOME/bin:$HIVE_HOME/bin:$FLINK_HOME/bin:$DATAX_LAUNCHER:$PATH\n\n\n注意: 如果您使用的是 MySQL 数据库，需要将 DATABASE 设置为 mysql，并且修改 SPRING_DATASOURCE_URL、SPRING_DATASOURCE_USERNAME 和 SPRING_DATASOURCE_PASSWORD 为您的数据库配置\n注意: dolphinscheduler_env.sh 文件中的配置会覆盖各个服务的配置文件(application.yaml)中的配置，所以如果您在配置文件中配置了某个参数，\n而且在 dolphinscheduler_env.sh 文件中也配置了，那么以 dolphinscheduler_env.sh 文件中的配置为准。dolphinscheduler_env.sh 里的配置项格式样例:\nSPRING_DATASOURCE_URL 在 application.yaml 为 spring.datasource.url，以此类推\n\n初始化数据库\n请参考 数据源配置 伪分布式/分布式安装初始化数据库 创建并初始化数据库\n启动 DolphinScheduler\n部署后的运行日志将存放在 xxx-server/logs 文件夹内\n# 启动 api-server\nbash ./bin/dolphinscheduler-daemon.sh start api-server\n\n# 启动 master-server\nbash ./bin/dolphinscheduler-daemon.sh start master-server\n\n# 启动 worker-server\nbash ./bin/dolphinscheduler-daemon.sh start worker-server\n\n# 启动 alert-server\nbash ./bin/dolphinscheduler-daemon.sh start alert-server\n\n\n\n注意: 第一次部署的话，可以通过 bash ./bin/dolphinscheduler-daemon.sh status xxx-server 来进行服务状态查询\n\n登录 DolphinScheduler\n浏览器访问地址 http://localhost:12345/dolphinscheduler/ui 即可登录系统 UI。默认的用户名和密码是 admin/dolphinscheduler123\n启停服务\n# 查询服务状态\nbash ./bin/dolphinscheduler-daemon.sh status xxx-server\n\n# 启停 Master\nbash ./bin/dolphinscheduler-daemon.sh stop master-server\nbash ./bin/dolphinscheduler-daemon.sh start master-server\n\n# 启停 Worker\nbash ./bin/dolphinscheduler-daemon.sh start worker-server\nbash ./bin/dolphinscheduler-daemon.sh stop worker-server\n\n# 启停 Api\nbash ./bin/dolphinscheduler-daemon.sh start api-server\nbash ./bin/dolphinscheduler-daemon.sh stop api-server\n\n# 启停 Alert\nbash ./bin/dolphinscheduler-daemon.sh start alert-server\nbash ./bin/dolphinscheduler-daemon.sh stop alert-server\n\n\n注意 1:: 每个服务在路径 &lt;service&gt;/conf/dolphinscheduler_env.sh 中都有 dolphinscheduler_env.sh 文件，这是可以为微\n服务需求提供便利。意味着您可以基于不同的环境变量来启动各个服务，只需要在对应服务中配置 &lt;service&gt;/conf/dolphinscheduler_env.sh 然后通过 &lt;service&gt;/bin/start.sh\n命令启动即可。但是如果您使用命令 /bin/dolphinscheduler-daemon.sh start &lt;service&gt; 启动服务器，它将会用文件 bin/env/dolphinscheduler_env.sh\n覆盖 &lt;service&gt;/conf/dolphinscheduler_env.sh 然后启动服务，目的是为了减少用户修改配置的成本.\n注意 2:：服务用途请具体参见《系统架构设计》小节。Python gateway service 默认与 api-server 一起启动，如果您不想启动 Python gateway service\n请通过更改 api-server 配置文件 api-server/conf/application.yaml 中的 python-gateway.enabled : false 来禁用它。\n注意 3:: DS默认使用本地模式的目录 /tmp/dolphinscheduler 作为资源中心, 如果需要修改资源中心目录, 请修改配置文件 conf/common.properties 中 resource 的相关配置项\n\n",
     "version": "dev",
     "link": "/guide/installation/pseudo-cluster",
     "title": "伪集群部署",

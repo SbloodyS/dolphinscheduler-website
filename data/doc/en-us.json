@@ -40632,7 +40632,7 @@
     ]
   },
   {
-    "content": "HTTP\nIf you need to use Http script for alerting, create an alert instance in the alert instance management and select the Http plugin.\nParameter Configuration\n\n\n\nParameter\nDescription\n\n\n\n\nURL\nThe Http request URL needs to contain protocol, host, path and parameters if the method is GET.\n\n\nRequest Type\nSelect the request type from POST or GET or PUT.\n\n\nHeaders\nThe headers of the Http request in JSON format. Not including content-type.\n\n\nBody\nThe request body of the Http request in JSON format, when using POST or PUT method to alert.\n\n\nContent Type\nThe content-type of header.\n\n\n\n\nAlarm message supports variables $msg, which can be used in URL, Headers, and Body.\n\nGET HTTP\nSend alert information by Http GET method.\nThe following shows the GET configuration example:\n\n",
+    "content": "HTTP\nIf you need to use Http script for alerting, create an alert instance in the alert instance management and select the Http plugin.\nParameter Configuration\n\n\n\nParameter\nDescription\n\n\n\n\nURL\nThe Http request URL needs to contain protocol, host, path and parameters if the method is GET.\n\n\nRequest Type\nSelect the request type from POST or GET or PUT.\n\n\nHeaders\nThe headers of the Http request in JSON format. Not including content-type.\n\n\nBody\nThe request body of the Http request in JSON format, when using POST or PUT method to alert.\n\n\nContent Type\nThe content-type of header.\n\n\n\n\nAlarm message supports variables ${msg}, which can be used in URL, Headers, and Body.\n\nGET HTTP\nSend alert information by Http GET method.\nThe following shows the GET configuration example:\n\n",
     "version": "dev",
     "link": "/guide/alert/http",
     "title": "HTTP",
